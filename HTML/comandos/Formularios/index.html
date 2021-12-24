@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    <form action="" method="get">
+      <fieldset>
+        <legend>Contato</legend>
+        <label for="">Nome <input type="text" /> </label>
+      </fieldset>
+
+      <!--lista de opçoes
+
+      <input type="text" list="fruta" placeholder="Escolha uma fruta" />
+
+      <!--cria a lista de opçoes
+
+      <datalist id="fruta">
+        <option value="banana">banana</option>
+        <option value="uva"></option>
+      </datalist>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+
+    <!-- sugere um complemento poseado no que vc normalemente escreve
+    <input type="text" autocomplete="email" />
+    <!--da foco a esse campo
+        desabilita o campo
+        deixa uma menssagem do campo 
+    
+    <input type="text" autofocus disabled value="menssagem aqui" />
+
+    <!-- faz o link de um input a um formulario
+    <form id="mer-form"></form>
+    <input name="email" type="email" form="meu-form" />
+    <!-- define o campo com obrigatorio-
+    <input type="text" required />
+    <!-- menssagem que some dentro do campo quando vc digita
+    <input type="email" placeholder="digite seu email" />
+  
+
+    <!--minimo de digitos 
+        -maximo de digitos
+        -tamanho do campo 
+    
+    <form action="">
+      <input type="password" minlength="4" maxlength="8" size="8" />
+      <button type="submit">Enviar</button>
+    </form>
+    <!-- cria uma regra com expressão regular e determina o numero de digitos minimo e maximo 
+      -Cria uma menssagem caso vc erre o padrão
+      -Muda pra um teclado numerico
+      -caso já tenha uma senha salva ele pergunta se vc quer usar ela ou caso não tenha oferece uma opção de senha 
+    
+    <form action="">
+      <input
+        type="password"
+        pattern="[0-9a-fA-F]{4,8}"
+        title="minomo 4 digitos maximo 8"
+        inputmode="numeric"
+        autocomplete="on"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  
+    <!--permite mais de 1 email
+        -garantir que vc esta usando um email valido no caso do gmail
+    
+    <form action="">
+      <input type="email" multiple pattern=".+@gmail\.com\.br" />
+      <button type="submit">Enviar</button>
+    </form>
+    <!--opçoes de emails
+    <form action="">
+      <datalist id="emailslist">
+        <option>email@gmail.com.br</option>
+      </datalist>
+      <input type="email" list="emailslist" />
+      <button type="submit">Enviar</button>
+    </form>
+  
+    <!--garantir que vc esta usando um link com um padrão valido
+      -corretor ortografico
+    
+    <form action="">
+      <input type="url" pattern=".*\.com\.br\/.*" spellcheck="false" />
+      <button type="submit">Enviar</button>
+    </form>
+  
+    <!--Envio de arquivos
+        -Define o tipo de documneto que pode ser enviado 
+        -Permite enviar varioas aquivos ao mesmo tempo
+    
+    <input type="file" accept=".doc,image/*" multiple/>
+    <!-- 
+      enctype="multipart/form-data" quandio se usa envio de aquivos e precisso essa estrutrua no form 
+    
+      <form action="" method="post" enctype="multipart/form-data"></form>
+
+    <!--pega cores
+    <input type="color"/>
+  
+    <!-- caixa de marcação
+      -checked começa com a caixa ja marcada
+    
+    <label for="sub">Receber noticias</label>
+    <input type="checkbox" name="sub" id="sub" checked />
+
+    <!-- varias marcações
+    <fieldset>
+      <legend>escolha</legend>
+      <div>
+        <input type="checkbox" name="interest" id="coding" />
+        <label for="coding">Coding</label>
+      </div>
+      <div>
+        <input type="checkbox" name="interest" id="music" />
+        <label for="music">music</label>
+      </div>
+    </fieldset> 
+  
+    <!-- campo oculto o usuario não vai   ver 
+      <input type="hidden" name="tempo">
+    
+    <!-- escolher 1 unica opção dentro de um grupo
+
+    
+    <fieldset>
+      <legend>Bora toma um cafe?</legend>
+      <label for="yes">sim</label>
+      <input type="radio" name="coffee" id="yes" value="yes" />
+      <label for="none">Não</label>
+      <input type="radio" name="coffee" id="none" value="no" checked />
+    </fieldset>
+  
+    <!-- texto com mais de 1 linha
+      -for do label deve ser igual ao id do textarea
+      - cols e rowl define o tamanho 
+      - tamanho maximo do texto
+      - wrap permite que o texto se etenda alem do limite da caixa sem quebra de linha
+    
+    <label for="message">Mensagem</label>
+    <textarea
+      name="recbe o valor"
+      id="message"
+      cols="30"
+      rows="10"
+      maxlength="200"
+      wrap="off"
+    ></textarea>
+  
+    <!--
+      cria opçoes de ecolha
+      - multiple limera escolher varias opções
+    
+    <label for="car">Qual o modelo do carro</label>
+    <select name="carmodel" id="car" multiple>
+      <option value="">selecione o modelo</option>
+      <option value="fiat">Uno</option>
+      <option value="audi">A3</option>
+    </select>
+
+    <!--
+      optgrup permite criar conjuntos de grupos dando um destaque ao conjunto de opções
+    
+    <label for="">
+      Animais:
+      <select name="pets">
+        <optgroup label="4-legged pets">
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="hamster" disabled>Hamster</option>
+        </optgroup>
+
+        <optgroup label="Flying pets">
+          <option value="parrot">Parrot</option>
+          <option value="macaw">Macaw</option>
+          <option value="albatross">Albatross</option>
+        </optgroup>
+      </select>
+    </label>
+  
+    <!--
+      campo de busca
+      aria-label usado pelo leitor de tela para acessibilidade
+  
+    <datalist id="searchterms">
+      <option>Mac</option>
+      <option>Win</option>
+      <option>Linux</option>
+    </datalist>
+    <form action="">
+      <input
+        type="search"
+        name="q"
+        list="searchterms"
+        placeholder="digite sua busca"
+        aria-label="Campo de pesquisa"
+      />
+      <button>Busca</button>
+    </form>
+
+    <form action="">
+      <label for="">Pesquisar pelo Id</label>
+      <input
+        type="search"
+        name="id"
+        pattern="[0-9]{2}"
+        title="O ID possui 2 digitos : 19"
+      />
+      <button>Busca</button>
+    </form>
+  
+    <!--
+    campo de dias
+    campo de dias e horas
+    apenas mes e ano
+    apenas horas
+    semanas
+  
+    <input type="date" name="" id="" />
+    <input type="datetime-local" name="" id="" />
+    <input type="month" name="" id="" />
+    <input type="time" name="" id="" />
+    <input type="week" name="" id="" />
+  --></body>
+</html>

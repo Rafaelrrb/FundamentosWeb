@@ -1,0 +1,346 @@
+/* 
+      Selectors
+conecta um elemento HTML ao CSS
+
+    Tipos
+Global " * "
+Element/Type Selector " h1, h2 , p , div "
+ID Selecto " #box , #container "
+Class Selector " .head , .m-4"
+
+
+@import "link" inclui um CSS externo 
+
+@media (min-width) {regas aqui} regras condicionais para dispositivos
+
+@font-face {fontes aqui} fontes externas
+
+@keyframes nameofanimation{config animação} Animações 
+
+/*    SHORTHAND  
+    A ordem não interfere nas definições dentro do shorthand
+
+*{
+  background-color: blueviolet;
+  background-image: url(link);
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  /* background shorthand 
+  background: blueviolet url(link) no-repeat left top;
+
+  font-style: italic;
+  font-weight: bold;
+  font-size: .8em;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+
+  /* font shorthand
+  font: italic bold .8em/1.2 Arial,sans-serif;
+}
+*/
+
+/*
+--------- EXEMPLO 1 -----------
+
+Seletor universal prioridade: 0
+* {
+  margin: 0;
+}
+
+Seletor ID prioridade: 100
+#container {
+  width: 400px;
+}
+
+Class prioridade: 10
+.m-4 {
+  margin: 30px;
+}
+
+Seletor de elemento prioridade: 1
+h1,
+h2 {
+  /* cor da letra 
+  color: blue;
+  /* tamanho da letra
+  font-size: 60px;
+  /* cor de fundo do campo das letras 
+  background: gray;
+} 
+
+!important " deve ser usado com cuidado pois quebra a hierarquia de cascata "
+
+*/
+
+/*
+    Vendor Prefixos
+  Permite que o browser adicione fetures
+p{
+  -webkit-background-clip: text; chorome safari ios android
+  -moz-background-clip: text; firefox
+  -ms-background-clip: text; internet explorer
+  -o-background-clip: text; oper
+}
+*/
+
+/*
+-------------- EXEMPLO 2
+h1 {
+  /* cria uma borda 
+  border: 1px solid red;
+  /* margim de fora da borda 
+  margin: 20px;
+  /* margim dentro das bordas 
+  padding: 10px;
+  /* add uma nova fonte
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+*/
+
+p {
+  margin: 0 auto;
+  padding-left: 15px;
+}
+
+/*     PIXELS    */
+
+/*
+link de busca de referencias de comandos css
+https://developer.mozilla.org/pt-BR/*/
+
+/*  
+    tipos numericos
+  
+  <integer> numero interio como -10 ou 233
+  <number> numero decimal coomo -2.4 64 ou 0.23
+  <dimension> É um <number> com uma unidade junto: 90deg 2s 8px
+  <percentagem> Representa a frção de outro numero: 50%  
+
+    unidades comuns
+  
+  <length> valor de sitancia : px em vw
+  <angle> um angulo : deg rad turn
+  <time> um tempo: s ms
+  <resolution> resolução para disposotivos: dpi 
+*/
+
+/*
+    Distancias relativas 
+
+  em: tamanho da font do pai
+
+  div{
+    font-size: 18px;
+  }
+  p{
+    multiplica o valor da font-size da div que é 18 por 2
+    
+    font-size: 2em; 
+  }
+  rem: tamanho da font do elemento raiz 
+  p{
+    multiplica o valor da font-size padrão(root valor padrão 16px) por 2
+    
+    font-size: 2rem; 
+  }
+
+  vw: 1% da viewport width(largura)
+  vh: 1% da viewport height(altura)
+
+*/
+
+/* 
+    Posições
+  <position>
+  represeneta um conjunto de de coordenadas 2D: top right left center
+
+  .box{
+    height: 300px;
+    width; 400px;
+    background-image: url("link");
+    background-repeat: no-repeat;
+    background-position: right 50px;
+  }
+*/
+
+/* 
+    Funções
+
+  rgb()
+  hsl()
+  url()
+  calc()
+*/
+
+/* 
+    Box Model
+
+  tamanho (largura x altura) width | height
+  conteudo                   content
+  Bordas                     border
+  preenchimento interno      padding
+  espço foda da caixa        margin
+
+*/
+
+/* 
+    Box-sizing
+    
+  div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    margin: 10%;
+    padding: 0 20px;
+
+    mantem a box com o mesmo tamanho e reorganiza o conteudo dentro dela pra caber com as configurações determinadas
+    box-sizing: border-box;
+  }
+*/
+
+/*
+  diplay: block vs inline
+
+    #block
+
+  ocupa toda a linha colocando o proximo elemento abaixo desse
+
+  width eheight sõa respeitados 
+
+  padding margin border irão funcionar normalmente
+
+    #inline
+  
+  elemento ao lado do outro
+
+  width height não funcionam
+
+  somente valores horizontais de margin padding e borde
+
+    Exemplo
+
+    block <p> <div> <section> todos os headings <h1><h2>
+
+    inline <a> <strong> <span> <em>
+    
+    
+    div {
+      reposiciona
+      height: 100px;
+
+      permite ter o coportamento igual o da span
+      display: inline;
+    }
+
+    span {
+      não reposiciona
+      height: 100px;
+
+      permite ter o coportamento igual o da div
+      display: block;
+    }
+*/
+
+/*
+      Mardin
+    espaços entre os elementos
+
+    margin-top
+    margin-reght
+    margin-bottom
+    margin-left
+
+    Valores: <length> <percentage> auto
+
+    div{
+      margin: 12px 16px 10px 4px;
+      margin: 12px 16px 0;
+      margin: 8px 16px;
+      margin: 8px;
+    }
+*/
+
+/*
+      Padding
+    Preenchimento interno da caixa
+
+    padding-top
+    padding-reght
+    padding-bottom
+    padding-left
+
+    Valores: <length> <percentage> auto
+
+    div{
+      padding: 12px 16px 10px 4px;
+      padding: 12px 16px 0;
+      padding: 8px 16px;
+      padding: 8px;
+    }
+*/
+
+/* 
+      border
+    as bordas da caixa
+
+    valores: <border-style> <border-width> <border-color>
+      style: slid dotted dashed double groove ridge inset outset
+      width: <length>
+      color: <color>
+    
+    
+    div{
+
+      shorthand
+      border-top: solid 2px;
+      
+      style
+      border: solid;
+      
+      width <length> style
+      border:  2px dotted;
+
+      style color
+      border: outset #f33;
+
+      width style color
+      border:  medium dashed green;
+    }
+
+      outline
+    difere em 4 sentidos 
+    
+    não modifica o tamanho da caixa 
+    pode ser diferente de retangular
+    não permite ajuste individuais
+    mais usado pelo user agendt para acessibilidade 
+*/
+
+/*
+      Cores
+
+    Tipos
+
+    background-color (para caixas)
+    color (para texto)
+    border-color (para caixas)
+*/
+
+/* 
+      Background
+
+    background-color: red; cor de fundo
+    background-image: url(link); coloca imagem
+    background-repeat: no-repeat; não repete imagem
+    background-position: right; posição da imagem 
+    background-size: contain; define tamanho da imagem
+    background-origin: border-box; posição inical da imagem
+    background-attachment: fixed; mantem a imagem sem movimeto 
+
+    background: ; pode usar todas as definções nessa só
+
+    background: linear-gradient(red,yellow) muda a cor aos poucos
+
+    
+*/

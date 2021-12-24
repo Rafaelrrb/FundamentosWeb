@@ -1,0 +1,125 @@
+/*      SELECTORS
+
+  Element Selector
+    todos os elemntos HTML
+    h1{
+      
+    }
+  ID Selector
+    Um elemento que tenha um atributo "id"
+    Cada id deve ser unico 
+    #nome{
+
+    }
+  Class Slector
+    Os elemntos que contenham um atributo  "class"
+    podem ter uma ou mais classes
+    .nome{
+
+    }
+  Attribute Selector
+    Um elemento que tenha um atributo especifico
+    [title]{
+
+    }
+  Pseudo-class
+    Elementos em um estado especifico
+    h1:hover{
+
+    }
+  multiplos
+    vc pode selecionar multiplos elementos usnado ,
+    h1,h2,p{
+
+    }
+*/
+
+/*    COMBINATORS
+    Combinadores pois eles trabalham para buscar e combinar sletores a fim de alicar um estilização
+
+      Descendant combinatro
+    Identificado por um espaço entre os seletores, busca um elemento dentro de outro
+          body article h2{
+
+          }
+    
+      Child combinator
+    Identificado pelo sinal ">" entre 2 seletores
+    Seleciona somente o elemento que é filho direto do pai
+          body > ul > li {
+
+          }
+
+      Adjacent sibling combinator
+    Identificado pelo sinal "+" entre 2 seletores
+    seleciona somente o elemento do lado direito que é irmão direto da hierarquia
+          h1 + p{
+
+          }
+      General sibling combinator
+    Identificado pelo sinal "~" entre 2 seletores
+    seleciona todos os elementos irmãos
+          h1~p{
+
+          }
+      Utilizando combinadores
+          ul>li[class='red']{
+
+          }
+*/
+
+/*    PSEUDO CLASSES
+    pseudo-classes começam com 2 pontos seguido do nome da pseudo-class
+          :pesudo-class-nome
+    
+    :first-child
+        1 filho de um grupo de elemntos
+    :nth-of-type()
+        pegue dos tipos de p(exemplo) dentro do () determine qual deles pegar 
+    :nth-child()
+        conta de todos os filhos não só de um tipo espesifico diferete de nth-of-type que conta dentro de um tipo espesifico de filho
+
+    :nth-child(even)
+          even-numeros pares
+    :nth-child(odd)
+          odd-numeros impares
+
+      Ações do usuario
+
+    :hover
+        muda de ação quando o cursor passa nele (exp mudar a cor de um link a:hover)
+    :focus
+        muda o foco usado mais em campos de input ( exp mudar a cor da borda da caixa do input:focus )
+    
+      Atributos 
+    
+    :disabled
+        desabilita exp: botoes e inputs
+    :required
+        obrigatorio obriga a efetuar alguma ação
+*/
+
+/*    PESEUDO-ELEMENTS
+    nos podemos adicionar elementos HTML pelo proprio CSS
+        ::pseudo-element-name
+    
+    ::before
+        Antes de cada elemento bota um conteudo direto pelo css
+          li::before{
+            content:"> "
+          }
+    ::after
+        depois de cada elemneto bota um conteudo
+          li::after{
+            content:";"
+          }
+
+      tanto o BEFORE quanto AFTER o CONTENT é um comando OBRIGATORIO sem ele não vão funcinoar pode ser vazios ""
+
+    ::first-line
+          faz alteração na 1 linha do conteudo 
+            p::first-line{
+              font-weight:bold;
+            }
+
+*/

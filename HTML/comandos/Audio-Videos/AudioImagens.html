@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video src="local do video" controls></video>
+
+    <video controls>
+      <source src="link" type="video/mp4" />
+    </video>
+
+    <!-- -define um tamanho pro video
+         -altura pro video
+         -reproduz o video automaticamente
+         -vai baixando o video já antes de rodar
+         -roda o video novamente quando chega no fim 
+         -video começando sem som
+         -bota uma imagem ate rodar o video
+    -->
+    <video
+      src="local do video"
+      controls
+      width="200"
+      height="100"
+      autoplay
+      preload="auto"
+      loop
+      muted
+      poster="imagem"
+    ></video>
+
+    <!--comandos de videos tambem funciona-->
+    <audio controls>
+      <source src="link" type="audio/mp3" />
+    </audio>
+    <!--pega video de outro lugar -->
+    <iframe
+      width="260"
+      height="315"
+      src="https://www.youtube.com/embed/JEu9IKw24sM"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!--botando um mapa-->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13627.282617160694!2d-51.96860065!3d-31.36392795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9510f697452228db%3A0x9808e1acd90b1aaa!2sPraia%20da%20Barrinha!5e0!3m2!1spt-BR!2sbr!4v1637134575211!5m2!1spt-BR!2sbr"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+
+    <img
+      src="caminho"
+      alt="caso não tenha imagem"
+      title="colocar um titulo na imagem "
+    />
+    <!-- usando imagem com link -->
+    <a href="">
+      <img
+        src="caminho"
+        alt="caso não tenha imagem"
+        title="colocar um titulo na imagem "
+      />
+    </a>
+    <!--usando css para carregar imagem -->
+    <p style="background-image: url('link')">imagem</p>
+
+    <!--figure-->
+    <a href="">
+      <figure>
+        <img
+          src="caminho"
+          alt="caso não tenha imagem"
+          title="colocar um titulo na imagem "
+        />
+
+        <figcaption>colocar um titulo na imagem</figcaption>
+      </figure>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- NORMAL FLOW
+    Ou Flow layouté a maneira que os elemntos "block" e "inline" ficam na pagina
+
+    <!-- strong ocupa apenas uma parte da linha 
+    <p>
+      Texto block com <strong style="background: red">inline</strong> dentro
+    </p>
+    <!-- ja no caso da dive ela ocupa a linha toda-
+    <div style="background: red">sem inline</div>
+    -->
+
+    <!-- TABLES
+          É a maneira de tabelas onde a tag "table" recebe um display "table" fazendo com que os elementos interos como "td" e "tr possam ser usados para montar uma tabela"
+    <!--
+    <table>
+      <tr>
+        <td>Hora</td>
+        <td>20:00</td>
+      </tr>
+      <tr>
+        <td>Hora</td>
+        <td>20:37</td>
+      </tr>
+    </table>
+    
+    -->
+
+    <!-- TABLESS
+          Uso das propriedades "float", "clear" para que os elementos possam mudar de posição na tabela
+
+    <!--
+    <div style="float: left">esquerda</div>
+
+    <div style="float: right">direita</div>
+
+    <div style="clear: both">normal</div>
+
+    -->
+
+    <!-- FLEXBOX  
+          A caixa se torna flex fazendo com que os elementos internos possam receber melhor
+            -Alinhamento 
+            -Ordenção 
+            -Tamanhos de flexiveis
+
+    <!--
+    <div class="flexbox">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+    
+
+    <!-- TEMINOLOGIA FLEX
+          -Flex container
+            -Flex item
+              <div class="container">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+              </div>
+
+          -Nesting
+              elemneto que contem outro elementos dentro
+                <div class="elemento">
+                  <div class="elementoInterno">
+                    
+                  </div>
+                </div>
+
+          -Axis
+            -main
+              -start, end
+            -cross
+              -start, end
+                
+                <div class="container">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                </div>
+
+                
+          -Flex sizing
+            -flexivel
+            -altura width/height dos itens para preenchimento dos espaços
+
+                 <div class="container">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                </div>
+    -->
+
+    <!--  PROPRIEDADES DO FLEX CONTAINER
+
+            -Direção dos intens
+              -Flex é uma dimensão (horizontal ou vertical)
+              -Podemos mudar a direção com "flex-direction"
+              -Valores: (row | row-reverse | column | column-reverse)
+
+                <div class="container">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                </div>
+
+            -Multi linhas
+              -Flex-wrap
+                -Podemos usar multi linhas.
+                -Cada nova linha, um novo flex container
+              -Flex-flow
+                shorthand
+                flex-direction || flex-wrap
+
+            Alinhamento 
+              -Principal
+                -justify-content
+                  -Alinhamento dos elementos dentro do container
+                  -Distribuição dos elementos
+                  -Valores:
+                    -flex-start
+                    -felx-end
+                    -conter
+                    -space-atound
+                    -space-between
+                    -space-evenly
+
+              -Cruzado
+                -align-items
+                  -Alinhamento dos elementos no eixo cruzado
+                  -Valores:
+                    -stretch
+                    -flex-start
+                    -flex-end
+                    -conter
+
+            -Espaços entre os itens
+                -gap
+                  -Espaços entre os elementos
+                -valores:
+                  -Unidades de medidas
+                    fixas: px,pt
+                    flexiveis: %, em, rem
+                  
+                  <div class="box">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                  </div>
+    -->
+
+    <!--  PROPRIEDADES PARA OS ITENS
+            -flex-basis
+              -espaço dentro do campo do item
+            -flex-grow
+              -O crescimento do item dentro do container em relação aos espaços vazios
+            -flex-shrink
+              -O encolher do item dentro do container
+            -flex
+              -shorthand
+              -flex-grow flex-shrink flex-basis
+              -podem ter 1 2 ou 3 valores
+                
+                <div class="box">
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>
+                  <div>4</div>
+                </div>
+
+            Altera tamanho de multiplos itens
+                <div class="page">
+                  <aside>Aside</aside>
+                  <main>
+                    Main
+                    <section>Content 1</section>
+                    <section>Content 2</section>
+                    <section>Content 3</section>
+                  </main>
+                </div>
+                
+            -order
+            
+            <div class="box">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+            </div>
+    -->
+
+    <!-- DESAFIOS
+          EXERCICOS 1
+            <header>
+              <nav>
+                <a href="http://">logo</a>
+                <ul>
+                  <li>home</li>
+                  <li>about</li>
+                  <li>testimonial</li>
+                  <li>constact</li>
+                </ul>
+              </nav>
+            </header>
+
+          EXERCICO 2
+          <div class="conatiner">
+            <aside>coluna esqueda</aside>
+            <main>coluna direita</main>
+          </div>
+
+          EXERCICIO 3
+
+           <div class="container">
+            <img src="http://source.unsplash.com/random?id=125" alt="1" />
+            <img src="http://source.unsplash.com/random?id=134" alt="2" />
+            <img src="http://source.unsplash.com/random?id=143" alt="3" />
+            <img src="http://source.unsplash.com/random?id=176" alt="4" />
+            <img src="http://source.unsplash.com/random?id=184" alt="5" />
+            <img src="http://source.unsplash.com/random?id=124" alt="6" />
+            <img src="http://source.unsplash.com/random?id=192" alt="7" />
+            <img src="http://source.unsplash.com/random?id=12" alt="8" />
+            <img src="http://source.unsplash.com/random?id=13" alt="9" />
+          </div>
+
+          EXERCICIO 4
+
+             <div class="container">
+              <button>
+                <img
+                  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9IkxheWVyXzFfMV8iIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwb2x5Z29uIHBvaW50cz0iMSwxIDEsMTUgMTUsOCAiLz48L3N2Zz4="
+                  alt=""
+                />
+                Play
+              </button>
+              <button>
+                <img
+                  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMTAxODIwO308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGRhdGEtbmFtZT0iTGF5ZXIgNSIgaWQ9IkxheWVyXzUiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE2LDMxQTE1LDE1LDAsMSwxLDMxLDE2LDE1LDE1LDAsMCwxLDE2LDMxWk0xNiwzQTEzLDEzLDAsMSwwLDI5LDE2LDEzLDEzLDAsMCwwLDE2LDNaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjEsMTdIMTFhMSwxLDAsMCwxLDAtMkgyMWExLDEsMCwwLDEsMCwyWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIxLDEySDExYTEsMSwwLDAsMSwwLTJIMjFhMSwxLDAsMCwxLDAsMloiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMSwyMkgxMWExLDEsMCwwLDEsMC0ySDIxYTEsMSwwLDAsMSwwLDJaIi8+PC9nPjwvc3ZnPg=="
+                  alt=""
+                />
+                Menu
+              </button>
+            </div>
+
+            EXERCICIO 5
+            <footer>2021</footer>
+    -->
+  </body>
+</html>

@@ -1,0 +1,43 @@
+/* https://www.w3.org/TR/css-fonts-3/
+
+*/
+
+p {
+  /*tipo de fonte
+    serif a fonte possui dobras
+    sans-serfi fonte sem dorbas
+  */
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+
+  /* web fontes
+    https://fonts.google.com/
+    */
+  /* aplica a fonte importada do css*/
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-variant: small-caps;
+  font-stretch: expanded;
+  /* espaço entre as letras */
+  letter-spacing: 5px;
+  /*espaço entre as palavras*/
+  word-spacing: 10px;
+  /* espaço entre linhas*/
+  line-height: 1.6;
+  /* muda tamanho de letra de maiuscula minusculas ou a 1 letra maiuscula */
+  text-transform: uppercase;
+  /* Aparencia decorativa de um texto
+    line: underline overline line-through
+    style: wavy dotted double dashed solid
+    color: values
+  */
+  text-decoration: underline;
+  /* alinhamento */
+  text-align: center;
+  /* sombreamento nas letras */
+  text-shadow: 1px 1px 8px red;
+}

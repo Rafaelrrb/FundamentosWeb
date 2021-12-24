@@ -1,0 +1,99 @@
+body {
+  margin: 0px;
+  height: 100vh;
+
+  /* usado pra definer o posicionamento*/
+  display: grid;
+  /* define a organisação desses objetos */
+  grid-template-areas:
+    'header  header'
+    'main aside'
+    'footer footer';
+  /* define o atamanho de cada bloco de linha */
+  grid-template-rows: 30px 1fr 40px;
+
+  /* define o atamanho de cada bloco de colunas */
+  grid-template-columns: 1fr 80px;
+}
+
+header {
+  grid-area: header;
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+}
+
+main {
+  grid-area: main;
+  background-color: red;
+}
+
+aside {
+  grid-area: aside;
+  background-color: blue;
+}
+
+footer {
+  grid-area: footer;
+  background-color: gray;
+}
+
+/*.body {
+  height: 100vh;
+  margin: 0px;
+
+  display: flex;
+
+  align-items: center;
+}*/
+/*.container {
+  width: 100vh;
+  display: flex;
+  flex-direction: column; muda de linhas pra coluna
+  justify-content: space-between;
+  justify-content: center;
+}*/
+/*.box {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}*/
+
+/*.box1 {
+  background-color: blue;
+   add o relative libera top right bottom left z-index  permitindo mover a possição sem mudar a dos outros
+  position: relative;
+  left: 100px;
+  top: 80px;*/
+
+/*position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 4;
+}*/
+
+/*.box2 {
+  background-color: green;
+   remove onde o objeto deveria estar e colaca ele numa nuva libernado o lugar prar outra box 
+  position: absolute;
+  top: 0px;*/
+
+/*position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+}*/
+
+/*.box3 {
+  background-color: black;
+  position: fixed;
+  top: 100px;*/
+
+/* z-index determina a ordem de camadas se sobreposição dos objetos 
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 5;
+}*/

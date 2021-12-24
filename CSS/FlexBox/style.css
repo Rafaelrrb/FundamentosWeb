@@ -1,0 +1,354 @@
+/*
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.item:nth-child(1) {
+  order: 1;
+}
+*/
+
+/*AXIS
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+*/
+
+/* FLEX SIZING 
+
+.container {
+  display: flex;
+  border: 1px solid red;
+  height: 200px;
+}
+
+.item {
+  background-color: gray;
+  border: 1px solid;
+  flex: 1;
+}
+*/
+
+/* PROPRIEDADES DO FLEX CONTAINER
+  
+    Direção dos intens
+
+.container {
+  display: flex;
+  flex-direction: row-reverse; /* inverte e bota no fim 
+}
+
+    Multi linhas
+     -Flex-wrap
+
+.box {
+  display: flex;
+  flex-wrap: wrap; /* cria novas linhas caso os elementos não caibam na linha depende do tamnho da pagina 
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+  width: 200px;
+}
+
+    -Flex-flow
+      shorthand
+      flex-direction || flex-wrap
+
+.box {
+  display: flex;
+  flex-flow: column wrap; /* permite usar flex-direction || flex-wrap juntos 
+  border: 1px dashed red;
+}
+
+    Alinhamento 
+      -justify-content
+
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+}
+
+    -Cruzado
+      -align-items
+
+.box {
+  display: flex;
+  align-items: center;
+
+  border: 1px dashed red;
+  height: 150px;
+}
+
+.box div {
+  border: 1px solid;
+}
+
+    Espaços entre os itens
+      -gap
+
+.box {
+  display: flex;
+  border: 1px dashed red;
+
+  gap: 2rem;
+}
+
+.box div {
+  border: 1px solid;
+}
+
+*/
+
+/* PROPRIEDADES PARA OS ITENS
+
+    Flex-basis
+
+.box {
+  display: flex;
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+  flex-basis: 25%;
+}
+    flex-grow
+
+.box {
+  display: flex;
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+}
+
+.box div:nth-child(3) {
+  flex-grow: 1;
+}
+
+.box div:nth-child(1) {
+  flex-grow: 2; quantidade de fraçoes do espaço vazio
+}
+
+    flex-shrink
+.box {
+  display: flex;
+  border: 1px dashed red;
+
+  width: 160px;
+}
+
+.box div {
+  flex-basis: 100%;
+  border: 1px solid;
+}
+
+.box div:nth-child(2) {
+  flex-shrink: 2;
+}
+
+    flex
+      -flex-grow flex-shrink flex-basis
+
+.box {
+  display: flex;
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+  flex: 0 0 40px;
+}
+
+    Altera tamanho de multiplos itens
+* {
+  height: 200px;
+}
+
+.page {
+  border: 2px solid;
+  min-height: 100pvh;
+
+  display: flex;
+}
+
+aside {
+  background: lightgreen;
+  flex: 1;
+}
+
+main {
+  background: lightblue;
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-child(1) {
+  background: lightgoldenrodyellow;
+  flex: 2;
+}
+
+main section:nth-child(2) {
+  background: lightcoral;
+  flex: 0 80px;
+}
+
+main section:nth-child(3) {
+  background: lightpink;
+  flex: 1;
+}
+
+    Order
+.box {
+  display: flex;
+  border: 1px dashed red;
+}
+
+.box div {
+  border: 1px solid;
+}
+
+.box div:nth-child(1) {
+  order: 1;
+}
+
+.box div:nth-child(2) {
+  order: 0;
+}
+
+.box div:nth-child(3) {
+  order: 0;
+}
+
+.box div:nth-child(4) {
+  order: -1;
+}
+
+*/
+
+/* DESAFIOS
+    
+    EXERCICIO 1
+
+* {
+  margin: 0;
+}
+
+header {
+  padding: 4rem;
+  background: lemonchiffon;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+ul li:last-child {
+  background: black;
+  color: white;
+  padding: 0.8rem;
+}
+
+    EXERCICIO 2
+
+.conatiner {
+  display: flex;
+  gap: 1rem;
+}
+
+aside,
+main {
+  border: 1px solid;
+  height: 40vh;
+}
+
+aside {
+  flex-basis: 25%;
+}
+
+main {
+  flex: 1;
+}
+
+    EXERCICIO 3
+
+.conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+img {
+  width: 30%;
+  height: auto;
+}
+    EXERCICIO 4
+
+.container {
+  display: flex;
+}
+
+button {
+  display: flex;
+  align-items: center;
+
+  line-height: 0;
+  gap: 0.4rem;
+}
+
+button img {
+  width: 2rem;
+  height: 2rem;
+}
+
+    EXERCICIO 5
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+footer {
+  margin-top: auto;
+
+  background: gray;
+  color: blue;
+
+  height: 8rem;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/

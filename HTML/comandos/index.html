@@ -1,0 +1,278 @@
+<!--
+  Seções comuns em docmunetos HTML
+
+  cabeçalho <header>
+  navegação <nav>
+  conteudo principal <main>
+  barra lateral <aside>
+  rodapé <footer>
+    
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Rafael Borba" />
+    <meta name="description" content=" descrisão pra vc ver no google" />
+
+    <!--
+      para icones personalizados
+      <link rel="icon" href="o link"> 
+    -->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>O titulo</h1>
+    <input type="text" />
+
+    <img src="umaImagemAqui.png" alt="casoNãoTenhaAImagem" />
+
+    <a href="">link</a>
+
+    <div class="carrinho">
+      <!-- exeplo de uso de class usada pra applica estilo css -->
+      class
+    </div>
+
+    <div class="carrinho" contenteditable="true">
+      <!-- contenteditable="true" permite editar o texto na propria pagina -->
+      contenteditable
+    </div>
+
+    <div class="carrinho" data-qualquer-nome-aqui="">
+      <!-- espande o tipo de atributo -->
+      data
+    </div>
+
+    <div class="carrinho" hidden>
+      <!-- oculta a tag -->
+      hidden
+    </div>
+
+    <div class="carrinho" id="nome">
+      <!-- se usa o id diferente pra cada tag que vc for colocar id-->
+      id
+    </div>
+
+    <div class="carrinho" style="color: brown">
+      <!-- tag de estilo mas se deve usar o css pra estilos -->
+      style
+    </div>
+
+    <div tabindex="3">
+      <!-- ordem de navegação da tecla TAB -->
+      conteudo 3
+    </div>
+
+    <div tabindex="1">
+      <!-- ordem de navegação da tecla TAB - -->
+      conteudo 1
+    </div>
+
+    <div tabindex="2">
+      <!-- ordem de navegação da tecla TAB - -->
+      conteudo 2
+    </div>
+
+    <div title="deine um titulo">
+      <!--  - -->
+      define um titulo
+    </div>
+
+    <div>
+      <p><em>alguma</em> coisa</p>
+      <p><strong>outra</strong> coisa</p>
+      <a href="http://google.com">saiba mais</a>
+    </div>
+
+    <div>
+      <!--  LISTAS -->
+      <h2>Ingredintes</h2>
+      <ol>
+        <li>3 folhas de couve</li>
+        <li>1 laranja</li>
+        <li>1 pedacinho de gengibre</li>
+        <li>300 ml de agua</li>
+        <li>adoçante a gosto</li>
+        <li>gelo a gosto</li>
+      </ol>
+    </div>
+
+    <div>
+      <!-- CITAÇÃO -->
+
+      <blockquote
+        cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes"
+      >
+        O <strong> Elemento HTML <code>&lt;blockquote&gt;</code></strong> (ou
+        <em> HTML Block Quotation Element </em>) indica que um texto externo foi
+        citado
+      </blockquote>
+
+      <p>
+        De acordo com
+        <a
+          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes"
+        >
+          <cite>pagina MDN blockquote </cite></a
+        >
+      </p>
+    </div>
+
+    <div>
+      <!-- ABREVIÇÕES COM ABBR -->
+      <p>
+        Usamos <abbr title="Hypertext markup language">HTML</abbr> para
+        estruturar nossos documentos da web.
+      </p>
+    </div>
+
+    <div>
+      <!-- DETALHES DE CONTATO -->
+      <address>
+        <p>
+          Rafaeel <br />
+          <strong> SLS , RS</strong>
+        </p>
+      </address>
+    </div>
+
+    <div>
+      <!-- LISTAS DE DESCRIÇÕES -->
+      <h2>Glossário</h2>
+      <dl>
+        <dt>hypertext</dt>
+        <dd>É um hiper texto com possibilidades...</dd>
+
+        <dt>Markup</dt>
+        <dd>Marcação de texto...</dd>
+      </dl>
+    </div>
+
+    <div>
+      <!-- REPRESENTANDO BLOCOS DE CÓDIGO -->
+      <pre>
+        <code>
+        docunet.querySelector("body")
+
+      </code>
+      </pre>
+    </div>
+    <!-- LINK-->
+    <div>
+      <a href="http://google.com" target="_blank">Google</a>
+    </div>
+    <div>
+      <p>Encontreme</p>
+      <ul>
+        <li><a href="http://google.com" target="_blank">Google 1</a></li>
+        <li>
+          <a href="mailto:rafaeborba@gmail.com.br" target="_blank">email</a>
+        </li>
+        <li><a href="tel:+55539912345678" target="_blank">Google 3</a></li>
+      </ul>
+    </div>
+    <!--Fraguimento-->
+    <div>
+      <ul>
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#alguma">alguma</a></li>
+      </ul>
+      <h1>antes</h1>
+      <h2 id="sobre">sobre</h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatum
+      sapiente enim, porro vel esse consequatur beatae! Repellat voluptatibus
+      porro mollitia aspernatur, saepe, aliquam est, quisquam nihil impedit
+      animi enim.
+      <h2 id="alguma">alguma</h2>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum dolore
+      iure cum amet culpa nisi quo ducimus error aliquam, consequuntur fuga
+      nulla aliquid velit repellat dolor voluptatem harum alias soluta.
+    </div>
+
+    <!-- Tabela-->
+    <div>
+      <table>
+        <caption>
+          Tabela de pessoas
+        </caption>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>rafael</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>Paulo</td>
+            <td>50</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total:</td>
+            <td>2 Pessoas</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div>
+      <table>
+        <caption>
+          Lojas
+        </caption>
+        <colgroup>
+          <col />
+          <col span="2" style="background-color: red" />
+          <col span="2" style="background-color: blue" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th rowspan="2"></th>
+            <th colspan="2" scope="colgroup">Loja 1</th>
+            <th colspan="2" scope="colgroup">Loja 2</th>
+          </tr>
+          <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Vassouras</th>
+            <td>50</td>
+            <td>30</td>
+            <td>40</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <th scope="row">Baudes</th>
+            <td>20</td>
+            <td>13</td>
+            <td>40</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+
+<!--
+  https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes
+
+  ver as tags
+-->
