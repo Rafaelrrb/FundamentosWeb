@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!--chama o arquivo .ejs-->
+  <%- include('../partials/head'); %>
+
+  <body class="container">
+    <!-- passando o bjeto , {pagina: 'Home'}-->
+    <%- include('../partials/header', {pagina: 'Home'}); %>
+
+    <main>
+      <div class="jumbotron">
+        <h1>Node com EJS</h1>
+        <p>Vamos aprender EJS</p>
+      </div>
+
+      <ul>
+        <!-- misturando html e ejs e recebendo informaçoes do server -->
+        <% qualitys.forEach(function(quality){ %>
+
+        <li><strong><%= quality.title%></strong> <%= quality.message %></li>
+
+        <% }) %>
+      </ul>
+    </main>
+
+    <%- include('../partials/footer'); %>
+  </body>
+</html>
+
+<!--  npm init -y 
+        inicinado o projeto do node
+
+      Antes foi cirado o projeto me HTML depois foi renomeado pra formato EJS por fim instalar o EJS
+
+      npm install ejs
+        instalando o ejs
+
+      npm install express
+        usado pra criar um servidor
+
+      Criar o server.js aqui se cria rotas 
+
+      Criar um pasta views onde ficaram todos os arquivos .EJS para serem rodados pelo servidor
+
+      Agora cipiamos as tags do head header e o footer e criamos arquivos .ejs com o memo nome e colamos o conteudo dentro 
+
+      melhorando organização criando pastas pages e partials organizar a rota das pastas no server.js e nas paginas index.ejs e abount.ejs
+
+      passando objetos 
+
+      <%= "recebe algum conteudo e mostra na tela"
+      <% " chama uma função"
+      <%- " efetua ações"
+-->
