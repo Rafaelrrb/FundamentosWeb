@@ -1,0 +1,233 @@
+  Text
+    campo que possui texto a-z 0-9 %*- ...
+
+  Number
+    campo que contem apenas numeros 
+
+  Datatime
+    campo que contem a data numeros e -  
+
+  (number)Primary Key
+    campo identificador são campos de conteudo unico
+
+  (number)Foreign Key
+    é o campo que estabelece o relacionamento entre duas tabelas de bancos distintos, sendo necessariamente chave primária na tabela de um dos bancos
+
+  (text)Unique
+    campo unico que não pode se repetir (nome de usuario)
+
+  Regras para escrever nome de tabelas e campos 
+    1 Deve começar por uma lertra do alfabeto
+    2 Os caracteres seguintes não são permitidos ()+-/*;=&|#<>^'{}% 
+    3 Não pode conter espaços
+    4 Não pode conter acentuação
+    5 _ underline é permitido
+
+
+  Instalar o BEEKEEPER
+    sudo snap install beekeeper-studio
+
+  Comando SQL
+
+    SELECT
+      Faz a busca  de informações e mostra elas
+
+      SELECT *(* pega todas as informações) FROM(de qual tabela) aluno 
+
+      SELECT nome,responsavel FROM aluno
+        SELECT escolhendo alguns campos da tabela 
+
+      SELECT * FROM aluno WHERE matricula=1
+        WHERE faz uma busca na tabela recebendo um campo e o conteudo a ser buscado
+
+      SELECT * FROM aluno WHERE nome like 'j%'
+        like faz a busca pelo conteudo que contenha tal definição usar sempre '' simples na busca
+
+    OPERADORES RELACIONAIS
+
+      =
+      usado em buscade uma infromação especifica apenas em campos que são number
+      SELECT * FROM aluno WHERE matricula=1
+
+      like
+      faz a busca pelo conteudo de textos que contenha tal definição usar sempre '' simples na busca
+      SELECT * FROM aluno WHERE nome like 'j%'
+
+      >
+      usado em buscade uma infromação onde o valor é maior que o escolhido apenas em campos que são number
+      SELECT * FROM aluno WHERE matricula>1
+
+      <
+      usado em buscade uma infromação onde o valor é menor que o escolhido apenas em campos que são number
+      SELECT * FROM aluno WHERE matricula<2
+
+      >=
+      usado em buscade uma infromação onde o valor é maior e que o escolhido incluindo ele apenas em campos que são number
+      SELECT * FROM aluno WHERE matricula>=1
+
+      <=
+      usado em buscade uma infromação onde o valor é menor que o escolhido incluindo ele apenas em campos que são number
+      SELECT * FROM aluno WHERE matricula<=2
+
+      <>
+      Não igual a pega todos os valores que não são iguais ao escolhido
+      SELECT * FROM aluno WHERE matricula <> 1
+
+      !=
+      diferente de pega todos que são difrente do valor escolhido
+      SELECT * FROM aluno WHERE matricula != 3
+
+    OPERADORES MATEMATICOS
+
+      +
+      SELECT * FROM aluno WHERE matricula = 1+1
+
+      -
+      SELECT * FROM aluno WHERE matricula = 2-1
+
+      *
+      SELECT * FROM aluno WHERE matricula = 1*1
+
+      /
+      SELECT * FROM aluno WHERE matricula = 2/1
+
+      %
+      modulo resto de divisão
+      SELECT * FROM aluno WHERE matricula = 3%2
+
+    OPERADOR LOGICO
+
+      AND
+      SELECT * FROM aluno WHERE nome like 'J%' AND matricula < 2
+
+      OR
+      SELECT * FROM aluno WHERE nome like 'J%' OR matricula < 2
+
+      BETWEEN
+      Faz a busca dentro de um intervalo 
+        SELECT * FROM funcionarios WHERE id_funcinoanrio BETWEEN 4 and 7
+
+      NOT BETWEEN
+      Iguinora os elemntos dentro de um intervalo 
+        SELECT * FROM funcionarios WHERE id_funcinoanrio NOT BETWEEN 4 and 7
+
+      IN e NOT IN
+      Faz a busca de um conjuto de valores
+        SELECT * FROM funcionarios WHERE id_departamento IN (1,2,5)
+      Faz o oposto do IN
+        SELECT * FROM funcionarios WHERE id_departamento NOT IN (1,2,5)
+
+      IS NULL e IS NOT NULL
+      Busca todos que o campo são NULL
+        SELECT * FROM funcionarios WHERE id_departamento IS NULL
+
+    MAIS COMANDOS
+
+      INSERT INTO
+      insere um novo aluno na tabela
+        INSERT INTO aluno(nome,cpf,responsavel) VALUES('Rafa',123456,'Dina')
+
+      UPDATE
+      Usado pra atualizar informações de algum campo
+        UPDATE aluno SET nome='Rafael', responsavel='Lindina' WHERE matricula=4
+
+
+      DELETE
+      Usado pra apagar informações
+        DELETE FROM aluno WHERE matricula = 4
+
+    UNINDO TABELAS
+
+      JOIN
+        Uni as duas tabelas tendo como tabela principala a de funcionarios e fazendo a relação com a tabela de departamentos
+          SELECT * FROM funcionarios JOIN departamentos ON departamentos.id_dept = funcionarios.id_departamento
+
+      JOIN com WHERE
+        O WHERE pode ser feito tanto pela tabela funcionarios quanto pela tabela departamentos
+          SELECT * FROM funcionarios JOIN departamentos ON departamentos.id_dept = funcionarios.id_departamento WHERE funcionarios.id_departamento=2
+
+      JOIN especificando campos
+        Faz a busca por campos depois do SELECT definindo de qual tabela vem  o campo 
+          SELECT funcionarios.nome,funcionarios.cpf,departamentos.descricao FROM funcionarios JOIN departamentos ON departamentos.id_dept = funcionarios id_departamento 
+
+      Alias(as)
+        São apelidos criado usando para facilitar a escrita " nome da tabela AS apelido " só funcina dentro do SELECT
+          SELECT func.nome as NOME,func.cpf,dept.descricao FROM funcionarios as func JOIN departamentos as dept ON dept.id_dept = func.id_departamento
+
+      LEFT OUTRER JOIN
+        Mostra tambem os campos que não tem relação entre as tabelas mas apenas da tabela principal no caso a tabela funcionarios
+          SELECT func.nome,func.cpf,dept.descricao FROM funcionarios as func LEFT OUTER JOIN departamentos as dept ON dept.id_dept = func.id_departamento
+
+    COMANDOS AVANÇADOS
+
+      ORDER BY
+        Ordena o conteudo da coluna escolhida usando o comando DESC ele inverte a ordem
+          SELECT * FROM aluno ORDER BY nome (DESC)
+
+      LIMIT
+        Determina a quantidade de conteudo a ser mostrado da lista
+          SELECT * FROM aluno LIMIT 2
+
+      OFFSET
+        Define quantos elementos ele vai iguinorar comecando dos primeiros elementos
+          SELECT * FROM funcionarios LIMIT 4 OFFSET 2
+
+      COUNT 
+        Faz a contagem de elementos dentro de um campo
+          SELECT COUNT(nome) FROM funcionarios 
+
+      GROUP BY
+        Organiza a contagem do COUNT em grupos 
+          SELECT id_departamento ,COUNT(id_departamento) FROM funcionarios  GROUP BY id_departamento
+
+      JOIN GROUP BY e COUNT juntos
+
+        SELECT departamentos.descricao ,COUNT(funcionarios.id_departamento) FROM funcionarios JOIN departamentos ON funcionarios.id_departamento = departamentos.id_dept GROUP BY departamentos.id_dept
+
+      HAVING
+        Creia um filtro 
+          SELECT departamentos.descricao, COUNT(funcionarios.id_departamento)  FROM funcionarios JOIN departamentos  ON funcionarios.id_departamento = departamentos.id_dept  GROUP BY departamentos.id_dept HAVING COUNT(funcionarios.id_departamento)>=2
+
+    COMANDOS NAS TABELAS
+
+      CREATE TABLE
+        1° criar um arquivo .sqlite no exmeplo o nome vai ser escola
+
+        AUTOINCREMENT gera um numero seguindo a ordem 
+
+          CREATE TABLE alunos (
+            matricula INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT,
+            cpf INTEGER UNIQUE,
+            responsavel TEXT
+          )
+
+          CREATE TABLE professores (
+            id_professor INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT,
+            cpf INTEGER UNIQUE,
+            materia TEXT
+          )
+
+        FOREIGN KEY(id_professor) REFERENCES professores(id_professor) referencia as chaves estrangeiras dentro da tabela de relação 
+
+          CREATE TABLE aulas (
+            id_professor INTEGER,
+            matricula INTEGER,
+            FOREIGN KEY(id_professor) REFERENCES professores(id_professor),
+            FOREIGN KEY(matricula) REFERENCES alunos(matricula)
+          )
+
+      ALTER TABLE
+        Faz alterações na tabela 
+
+        Trocando nome das tabelas
+          ALTER TABLE aluno RENAME TO alunos
+          ALTER TABLE professor RENAME TO professores
+        
+        Troca nome da coluna 
+          ALTER TABLE aulas RENAME COLUMN id_aluno TO matricula_aluno
+
+      DROP TABLE
+        Deleta as tabelas e o conteudo 
+          DROP TABLE aulas
