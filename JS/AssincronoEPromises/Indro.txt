@@ -1,0 +1,22 @@
+Sincrono
+
+  Uma tarefa é concluida aṕos a outra, a tarefa anterio precisa ser concluída, para então iniciar a próxima.
+  Por padrão, o JS é um sistema síncrono
+
+Assíncrono
+
+  Tarefas são executadas de maneira independente da outra
+  JS poderá usar o assincronismo ao seu favor
+
+Promise
+
+  É um objeto JS com a pomessa de que algo será realizado
+    É usado para operações assíncronas
+      - Carrega um arquivo
+      - Leitura de uma API
+
+  Uma  promessa poderá ser:
+    - Pending: Estado inicial, assim que o Objeto da promessa é inicido
+    - Fulfilled: A promessa foi concluida com sucesso
+    - Rejected: A promesssa foi rejeitada, houve um erro 
+    - Settled: Seja com sudesso ou com erro ela foi finalmente concluída
